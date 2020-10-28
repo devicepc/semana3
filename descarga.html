@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Responsive Layout</title>
+
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<style>
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+h1 {
+  margin-bottom: 15px;
+}
+h3 {
+  margin-bottom: 15px;
+    text-align: center;
+    color: red;
+    margin-right: 7px;
+    font-size: 25px;
+    
+}
+
+p {
+  border: 1px solid black;
+  background-color: grey;
+  width: 90%;
+  height: 150px;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: Helvetica;
+  color: white;
+}
+    #enca{
+        background-color: red;
+    }
+    
+    #titleP{
+        text-align: center;
+        font-size: 1.3em;
+        
+    }
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+}
+    
+    /********menu*********/
+    #titleP a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+                list-style: none;
+			}
+			
+			#titleP a:hover {
+				background-color:#434343;
+			}
+			
+			#titleP ul {
+				display:none;
+				position:absolute;
+				min-width:50%;
+                list-style: none;
+			}
+			
+			#titleP:hover > ul {
+				display:block;
+			}
+			
+			#titleP ul li {
+				position:relative;
+                list-style: none;
+			}
+			
+			#titleP ul li ul {
+				right:-140px;
+				top:-13px;
+			}
+    
+    #menu span{
+        text-align: center;
+    }
+    
+    
+    
+    /***** mas mneu ******/
+    .menu_bar {
+	display:none;
+}
+ 
+header {
+	width: 100%;
+}
+ 
+header nav {
+	background:#023859;
+	z-index:1000;
+	max-width: 1000px;
+	width:95%;
+	margin:20px auto;
+}
+ 
+header nav ul {
+	list-style:none;
+}
+ 
+header nav ul li {
+	display:inline-block;
+	position: relative;
+}
+ 
+header nav ul li:hover {
+	background:#E6344A;
+}
+ 
+header nav ul li a {
+	color:#fff;
+	display:block;
+	text-decoration:none;
+	padding: 20px;
+}
+ 
+header nav ul li a span {
+	margin-right:10px;
+}
+ 
+header nav ul li:hover .children {
+	display:block;
+}
+ 
+header nav ul li .children {
+	display: none;
+	background:#011826;
+	position: absolute;
+	width: 150%;
+	z-index:1000;
+}
+ 
+header nav ul li .children li {
+	display:block;
+	overflow: hidden;
+	border-bottom: 1px solid rgba(255,255,255,.5);
+}
+ 
+header nav ul li .children li a {
+	display: block;
+}
+ 
+header nav ul li .children li a span {
+	float: right;
+	position: relative;
+	top:3px;
+	margin-right:0;
+	margin-left:10px;
+}
+ 
+header nav ul li .caret {
+	position: relative;
+	top:3px;
+	margin-left:10px;
+	margin-right:0px;
+}
+ 
+@media screen and (max-width: 800px) {
+	body {
+		padding-top:80px;
+	}
+ 
+	.menu_bar {
+		display:block;
+		width:100%;
+		position: fixed;
+		top:0;
+		background:#E6344A;
+	}
+ 
+	.menu_bar .bt-menu {
+		display: block;
+		padding: 20px;
+		color: #fff;
+		overflow: hidden;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+ 
+	.menu_bar span {
+		float: right;
+		font-size: 40px;
+	}
+ 
+	header nav {
+		width: 80%;
+		height: calc(100% - 80px);
+		position: fixed;
+		right:100%;
+		margin: 0;
+		overflow: scroll;
+	}
+ 
+	header nav ul li {
+		display: block;
+		border-bottom:1px solid rgba(255,255,255,.5);
+	}
+ 
+	header nav ul li a {
+		display: block;
+	}
+ 
+	header nav ul li:hover .children {
+		display: none;
+	}
+ 
+	header nav ul li .children {
+		width: 100%;
+		position: relative;
+	}
+ 
+	header nav ul li .children li a {
+		margin-left:20px;
+	}
+ 
+	header nav ul li .caret {
+		float: right;
+	}
+}
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+  .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+    float: left;
+    border: 1px solid green;
+  }
+  .col-lg-3 {
+    width: 30%;
+  }
+  .col-lg-3 {
+    width: 30%;
+  }
+  .col-lg-3 {
+    width: 30%;
+  }
+  #caca{
+        width: 30%;
+    }
+     #cacac{
+        width: 30%;
+    }
+    
+     #cacaca{
+        width: 30%;
+    }
+        
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+  .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+    float: left;
+    border: 1px solid green;
+  }
+ 
+    #caca{
+        width: 40%;
+        
+    }
+     #cacac{
+        width: 45%;
+    }
+    
+     #cacaca{
+        width: 100%;
+    }
+     .col-lg-3 {
+    width: 45%;
+  }
+  .col-lg-3 {
+    width: 45%;
+  }
+  .col-lg-3 {
+    width: 45%;
+  }
+  
+}
+
+</style>
+<link rel="stylesheet" href="https://i.icomoon.io/public/temp/db67178cc6/UntitledProject/style.css">
+
+
+<!-----javascritp---->
+<script type="text/javascript">
+	$(document).ready(main);
+ 
+var contador = 1;
+ 
+function main () {
+	$('.menu_bar').click(function(){
+		if (contador == 1) {
+			$('nav').animate({
+				left: '0' 
+                
+			});
+			contador = 0;
+		} else {
+			contador = 1;
+			$('nav').animate({
+				left: '-100%'
+               
+			});
+		}
+	});
+ 
+	// Mostramos y ocultamos submenus
+	$('.submenu').click(function(){
+		$(this).children('.children').slideToggle();
+	});
+}
+
+
+</script>
+ 
+
+<!----- fin de javascritp---->
+
+
+
+
+</head>
+<body>
+<div id="enca">
+<h1>Food, LLC</h1>
+</div>
+
+
+
+<header>
+		<div class="menu_bar">
+			<a href="#" class="bt-menu"><span class="icon-list2"></span>Our Menu</a>
+		</div>
+ 
+		<nav>
+			<ul>
+				
+				<li class="submenu">
+					<a href="#" id="menu"><span class="icon-rocket"></span>Our Menu<span class="caret icon-arrow-down6"></span></a>
+					<ul class="children">
+						<li><a href="#">Chiken <span class="icon-dot"></span></a></li>
+						<li><a href="#">Beef <span class="icon-dot"></span></a></li>
+						<li><a href="#">Sushi <span class="icon-dot"></span></a></li>
+					</ul>
+				</li>
+				
+			</ul>
+		</nav>
+	</header>
+
+		
+		
+<div class="menu_bar">
+<li id="titleP"><a href="#" class="bt-menu"><span class="icon-6d"></span>Our Menu</a>
+					
+					
+					</div> 
+	
+<!--  menu categories -->
+
+
+
+
+
+<!--  fin de menu categories -->
+
+<div class="row">
+  <div id="caca parrafo1" class="col-lg-3 col-md-6"><h3 id="title">Chiken</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum aliquid fuga eveniet saepe, impedit vitae doloribus consequuntur eligendi, obcaecati sed culpa vel eius perspiciatis voluptatibus blanditiis ex aut quibusdam libero.</p></div>
+  <div id="cacac" class="col-lg-3 col-md-6"><h3>Beef</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae excepturi, laudantium esse accusantium porro quidem atque voluptates, commodi incidunt minus tempora debitis, ex at aut perferendis qui iste maxime obcaecati.</p></div>
+  <div id="cacaca" class="col-lg-3 col-md-6"><h3>Sushi</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste sequi, molestias magni eius, illum neque, velit, temporibus libero nihil aspernatur voluptatibus quidem id sit eum labore possimus molestiae ab. Facilis!</p></div>
+  
+</div>
+
+
+</body>
+</html>
